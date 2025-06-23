@@ -1,0 +1,264 @@
+/* Общие стили для skeleton-элементов */
+.skeleton {
+    background-color: #e0e0e0; /* Серый фон */
+    border-radius: 4px; /* Закругленные углы */
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Анимация shimmer (мерцание) для отдельных блоков */
+  .skeleton-block::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.5) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    animation: shimmer 1.5s infinite;
+  }
+  
+  @keyframes shimmer {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  
+  /* Стили для skeleton-лоадеров в деталях счета */
+  .skeleton-details {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin-bottom: 16px;
+  }
+  
+  .skeleton-details-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .skeleton-details-title {
+    height: 24px;
+    width: 40%;
+  }
+  
+  .skeleton-details-balance {
+    height: 32px;
+    width: 30%;
+  }
+  
+  .skeleton-details-content {
+    display: flex;
+    gap: 16px;
+  }
+  
+  .skeleton-details-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .skeleton-details-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .skeleton-details-block {
+    height: 100px;
+    width: 100%;
+  }
+  
+  /* Стили для skeleton-лоадеров графиков */
+  .skeleton-chart {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin-bottom: 16px;
+  }
+  
+  .skeleton-chart-header {
+    height: 24px;
+    width: 40%;
+  }
+  
+  .skeleton-chart-content {
+    display: flex;
+    gap: 16px;
+  }
+  
+  .skeleton-chart-axis {
+    height: 200px;
+    width: 20px;
+  }
+  
+  .skeleton-chart-bars {
+    flex: 1;
+    display: flex;
+    gap: 8px;
+    align-items: flex-end;
+  }
+  
+  .skeleton-chart-bar {
+    height: 100%;
+    width: 20%;
+  }
+  
+  /* Стили для skeleton-лоадеров таблицы транзакций */
+  .skeleton-transactions {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin-bottom: 16px;
+  }
+  
+  .skeleton-transactions-header {
+    height: 24px;
+    width: 40%;
+  }
+  
+  .skeleton-transactions-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .skeleton-transaction-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  
+  .skeleton-transaction-cell {
+    height: 20px;
+    width: 20%;
+  }
+  
+  /* Стили для skeleton-лоадеров в блоке перевода средств */
+  .skeleton-transfer {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin-bottom: 16px;
+  }
+  
+  .skeleton-transfer-input {
+    height: 40px;
+    width: 100%;
+  }
+  
+  .skeleton-transfer-button {
+    height: 40px;
+    width: 100%;
+  }
+/* Стили для skeleton-лоадеров в блоке обмена валют */
+.skeleton-currency-exchange {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.skeleton-currency-select {
+  height: 40px;
+  width: 100%;
+}
+
+.skeleton-currency-amount {
+  height: 40px;
+  width: 100%;
+}
+
+.skeleton-currency-button {
+  height: 40px;
+  width: 100%;
+}
+
+/* Стили для skeleton-лоадеров в списке валютных счетов */
+.skeleton-currency-balances-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.skeleton-currency-balance {
+  height: 60px;
+  width: 100%;
+}
+
+/* Стили для skeleton-лоадеров в списке курсов валют */
+.skeleton-exchange-rates-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.skeleton-exchange-rate {
+  height: 40px;
+  width: 100%;
+}
+/* Стили для skeleton-лоадера карты */
+.skeleton-map {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px; /* Высота контейнера карты */
+    width: 100%;
+    background-color: #e0e0e0; /* Серый фон */
+    border-radius: 8px;
+    font-size: 18px;
+    color: #333;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .skeleton-map::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.5) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    animation: shimmer 1.5s infinite;
+  }
+  
+  @keyframes shimmer {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }

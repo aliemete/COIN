@@ -1,0 +1,250 @@
+/* account-details-page */
+.skeleton-details {
+
+}
+.skeleton-chart {
+
+}
+.skeleton-transactions {
+
+}
+.details-page {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 50px;
+  }
+  .details-general {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 50px;
+  }
+  .details-left {
+    display: flex;
+    flex-direction: column;
+    align-items: normal;
+    align-content: normal;
+    padding: 0px;
+
+  }
+
+  .details-left-h1{
+    font-family: 'Work Sans';    
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: 30px;
+    font-size: 34px;
+}
+  .details-left-h2{
+    font-family: 'Work Sans';    
+    font-size: 34px;
+    font-weight: normal;
+    margin: 0;
+  }
+  .details-head {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .details-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .back-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .back-button-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+  }
+
+  .back-button-icon  svg path {
+    width: 24px;
+    height: 24px;
+    stroke: #fff;
+  }
+  .details-balance {
+    display: flex;
+    justify-content: space-between;
+  }
+  .details-balance-title {
+    font-weight: bold;
+    margin-right: 25px;
+  }
+  .account-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+.details-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+/* transfer */
+.transfer-container {
+    flex-shrink: 0;
+    width: 40%;
+    max-width: 610px;
+    min-height: 238px;
+    margin: 0 25px 25px 0;
+    padding: 25px;
+    background-color: #F3F4F6;
+    border-radius: 50px;
+}
+.transfer-funds {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+.transfer-funds h2 {
+    font-family: 'Work Sans';
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+.transfer-inpits {
+    display: flex;
+    margin-bottom: 25px;
+    justify-content: flex-end;
+    align-items: center;
+}
+.transfer-inpits input {
+    width: 40%;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #9CA3AF;
+    border-radius: 7px;
+}
+.transfer-label {
+    width: 200px;
+    margin-right: 20px;
+}
+.transfer-button-block {
+    display: flex;
+    justify-content: flex-end;
+    width: 80%;
+}
+.transfer-button {
+     width: 40%;
+}
+.transfer-invisible {
+    width: 5%;
+}
+.transfer-result {
+    margin-top: 10px;
+    align-self: center;
+    color: #a10606;
+}
+/* chart */
+.balance-chart-container {
+    width: 40%;
+    max-width: 700px;
+    max-height: 270px;
+    padding: 25px 50px;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25); 
+}
+.balance-chart-title {
+    font-family: 'Wokr Sans';
+    font-size: 20px;
+}
+@media (max-width: 1200px) {
+    .balance-chart-container {
+        box-shadow: none;
+        margin-bottom: 50px;
+    }
+}
+@media (max-width: 1000px) {
+    .details-page {
+        margin: 0;
+        padding: 15px 0 15px 0;
+    }
+    .details-general {
+      flex-direction: column; 
+    }
+    .details-left {
+        margin-bottom: 15px;
+        place-content: none;
+    }
+    .details-left-h1{
+        margin-bottom: 20px;
+        font-size: 24px;
+    }
+    .details-left-h2{
+        font-size: 24px;
+    }
+    .back-button {
+        position: absolute;
+        top: 15%;
+        right: 10px;
+        width: 30%;
+    }
+    .transfer-container {
+        min-width: 100%;
+        align-items: center;
+        margin: 0;
+        border-radius: 0;
+    }
+    .transfer-invisible {
+        width: 0;
+    }
+    .transfer-label {
+        margin-bottom: 10px;
+        text-align: center;
+        font-size: 14px;
+    }
+    .transfer-inpits {
+        flex-direction: column;
+        width: 80%;
+        margin-bottom: 15px;
+    }
+
+    .transfer-button-block {
+        justify-content: center;
+    }
+    .transfer-button {
+        max-width: 300px;
+    }
+    .balance-chart-container {
+        width: 100%;
+        height: 250px;
+        padding: 25px 15px;
+        margin-bottom: 20px;
+        border-radius: 0;
+        box-shadow: none; 
+    }
+}
+@media (max-width: 510px) {
+    .details-page {
+        padding: 5px; 
+        margin: 0;
+      }
+    .details-left-h1{
+        margin-bottom: 20px;
+        font-size: 14px;
+    }
+    .details-left-h2{
+        font-size: 14px;
+    }
+    .transfer-label {
+        margin-bottom: 15px;
+        font-size: 14px;
+    }
+    .back-button {
+        width: 20%;
+        top: 14%;
+        font-size: 0;
+    }
+}

@@ -1,0 +1,85 @@
+.transaction-table {
+  padding: 25px;
+  background-color: #F3F4F6;
+  border-radius: 15px;
+}
+.transactions-container {
+    width: 100%;
+    overflow-x: auto; /* Горизонтальная прокрутка, если таблица не помещается */
+  }  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+
+  }
+  .table-header {
+    background-color: #116ACC;
+    color: #fff;
+
+  }
+  .table tr {
+    border-radius: 15px;
+  }
+  .table th,
+  .table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+  }
+  .incoming {
+    color: #76CA66;
+  }
+  .outgoing {
+    color: #FD4E5D;
+  }
+  .show-more-button {
+    margin-top: 20px;
+  }
+  /* Адаптация для экранов менее 520px */
+  @media (max-width: 770px) {
+    .transactions-container {
+      max-height: 200px; /* Ограничиваем высоту контейнера */
+      overflow-y: auto; /* Добавляем вертикальную прокрутку */
+      overflow-x: auto; /* Включаем горизонтальную прокрутку */
+    }
+    .table {
+      font-size: 12px; /* Уменьшаем размер шрифта */
+    }
+  
+    .table th,
+    .table td {
+      padding: 5px; /* Уменьшаем отступы */
+    }
+    .table-title {
+        display: block;
+    }
+    /* Скрываем неважные колонки */
+    .table thead {
+        display: none;
+    }
+    /* .table th:nth-child(3),
+    .table td:nth-child(3) {
+      display: none;
+    } */
+  
+    /* Делаем таблицу вертикальной (каждая строка — карточка) */
+    .table tr {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+  
+    .table td {
+      border: none;
+      padding: 5px;
+    }
+  
+    .table td::before {
+      content: attr(data-label); /* Добавляем подписи к данным */
+      font-weight: bold;
+      display: block;
+      margin-bottom: 5px;
+    }
+  }

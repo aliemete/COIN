@@ -1,0 +1,160 @@
+/* header */
+
+.header {
+  display: flex;
+  width: 100%;
+  height: 100px;
+}
+.header-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-width: 100%;
+    align-items: center;
+    background-color: #116ACC;
+    color: white;
+    padding: 10px 20px;
+  }
+.header-logo {
+   align-content: center;
+   font-family: 'Work Sans'; 
+   font-size: 48px;
+   font-weight: 300;
+}
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav a {
+  height: 22px;
+  padding: 15px;
+  align-content: center;
+  background-color: #fff;
+  color: #116ACC;
+  border-radius: 7px;
+  text-decoration: none;
+  font-family: 'ubuntu';
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+}
+.nav-link.active {
+    background-color: #A0C3FF;
+}
+.nav a.hidden {
+  display: none;
+}
+.hidden {
+  display: none;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+* Стили для кнопки меню */
+.menu-toggle {
+  display: none; /* По умолчанию скрываем на десктопах */
+
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.menu-icon {
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+/* Анимация для превращения в крестик */
+.menu-open .menu-toggle .menu-icon:nth-child(1) {
+  transform: rotate(45deg) translate(7px, 7px);
+}
+
+.menu-open .menu-toggle .menu-icon:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-open .menu-toggle .menu-icon:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Стили для выпадающего меню */
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+/* Мобильные стили */
+@media (max-width: 1200px) {
+
+}
+@media (max-width: 768px) {
+  .header-logo {
+    font-size: 38px;
+  }
+  .nav a {
+    height: 20px;
+    padding: 10px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
+@media (max-width: 536px) {
+  .menu-toggle {
+    display: flex; /* Показываем кнопку на мобильных устройствах */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50px;
+    height: 30px;
+  }
+
+  .nav {
+    display: none; /* Скрываем навигацию по умолчанию на мобильных устройствах */
+    flex-direction: column;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    right: 0;
+    background-color: #116ACC;
+    width: 100%;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .menu-open .nav {
+    display: flex; /* Показываем навигацию при открытом меню */
+    z-index: 1;
+  }
+
+  .nav a {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .nav a:last-child {
+    border-bottom: none;
+  }
+}
+@media (max-width: 320px) {
+  .nav a {
+    height: 20px;
+    padding: 10px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
